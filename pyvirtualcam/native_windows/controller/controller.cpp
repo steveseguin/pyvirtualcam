@@ -71,6 +71,7 @@ void virtual_output_stop()
 	}	
 	shared_queue_write_close(&virtual_out->video_queue);
     free(virtual_out);
+	virtual_out = nullptr;
 	output_running = false;
 }
 
